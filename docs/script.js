@@ -63,6 +63,11 @@ function createRunwayCheckbox(runway, type) {
     div.appendChild(checkbox);
     div.appendChild(label);
 
+    // Toggle checkbox state when clicking on the entire div
+    div.addEventListener('click', () => {
+        checkbox.checked = !checkbox.checked;
+    });
+
     return div;
 }
 
